@@ -27,13 +27,15 @@ if [ ! -d "$ZSH_CUSTOM_DIR" ]; then
     exit 1
 fi
 
-# 3. Handle Plugin Location
+# 4. Handle Plugin Location
 if [ "$PWD" != "$PLUGIN_DEST" ]; then
-    echo "Please clone the repo to the right directory"
-    exit 1
+    echo "Copying plugin to $PLUGIN_DEST..."
+    mkdir -p "$PLUGIN_DEST"
+    cp -r ./* "$PLUGIN_DEST/"
+    cd "$PLUGIN_DEST" || exit 1
 fi
 
-# 4. Ollama Setup
+# 5. Ollama Setup
 echo "Pulling gemma4:e2b..."
 ollama pull gemma4:e2b
 

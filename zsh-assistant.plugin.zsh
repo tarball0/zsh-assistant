@@ -1,4 +1,10 @@
 _ollama_api_call() {
+  if ! curl -s http://localhost:11434/api/tags > /dev/null; then
+    echo "Error: Ollama is not running."
+    echo "Please start the Ollama service or run 'ollama serve' in another terminal."
+    return 1
+  fi
+
   local text="$1"
   jq -n --arg p "$text" \
     '{model: "gemma-linux", prompt: $p, stream: false, think: false}' | \
