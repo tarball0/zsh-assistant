@@ -13,14 +13,14 @@ This is an oh-my-zsh plugin that gives short snappy responses to basic questions
 3. Clone this repository into `$ZSH_CUSTOM/plugins` (by default `~/.oh-my-zsh/custom/plugins`)
 
     ```sh
-    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    git clone https://github.com/tarball0/zsh-assistant ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-assistant
     ```
 4. Add the plugin to the list of plugins for Oh My Zsh to load (inside `~/.zshrc`):
 
     ```sh
     plugins=( 
         # other plugins...
-        zsh-autosuggestions
+        zsh-assistant
     )
     ```
 
