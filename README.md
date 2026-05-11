@@ -42,5 +42,5 @@ The assistant is aware of your current directory and directory content.
 ![Context Awareness](screenshots/context-awareness.png)
 
 #### Complex Logic
-It can handle marginally complex tasks like batch renaming with ease.
+It can handle marginally complex tasks like batch renaming with ease. (always verify logic before executing)
 ![Rename Logic](screenshots/rename-logic.png)
