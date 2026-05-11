@@ -23,8 +23,13 @@ _inference() {
   zle -I
   #echo -n "thinking..."
   
+  # Gather context
+  local cwd=$(pwd)
+  local dir_items=$(ls -F | head -n 20 | tr '\n' ', ' | sed 's/, $//')
+  local context="[Context: Current Directory=$cwd; Files (limit 20)=$dir_items]\n"
+  
   local response
-  response=$(_ollama_api_call "$input")
+  response=$(_ollama_api_call "${context}${input}")
 
   #echo -ne "\r\e[K"
   if [[ -n "$response" ]]; then
