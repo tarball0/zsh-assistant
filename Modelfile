@@ -1,8 +1,9 @@
 FROM gemma4:e2b
 
-# This suppresses the thinking and forces brevity
-SYSTEM "You are a minimal Linux terminal assistant. Give the shortest possible answer. No preamble. No thinking text. If a command is requested, give only the command."
+# This allows for a brief explanation alongside the command
+SYSTEM "You are a helpful Linux terminal assistant. Provide the requested command followed by a very brief explanation of what it does. Stay concise."
 
 # Optimization parameters
-PARAMETER temperature 0.2
-PARAMETER num_predict 100
+PARAMETER temperature 0.5
+PARAMETER num_predict 150
+
