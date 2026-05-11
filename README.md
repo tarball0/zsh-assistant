@@ -34,3 +34,13 @@ This is an oh-my-zsh plugin that gives short snappy responses to basic questions
 
 ## Usage
 To use, simply type in anything you want to ask, and hit `Ctrl+Space`
+
+### Examples
+
+#### Context Awareness
+The assistant is aware of your current directory and directory content.
+![Context Awareness](screenshots/context-awareness.png)
+
+#### Complex Logic
+It can handle marginally complex tasks like batch renaming with ease.
+![Rename Logic](screenshots/rename-logic.png)
